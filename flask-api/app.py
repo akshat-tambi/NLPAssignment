@@ -37,7 +37,7 @@ def predict():
     
     return jsonify({
         'message': message,
-        'prediction': 'Spam' if prediction == 1 else 'Ham'
+        'prediction': 'Spam' if prediction == 1 else 'Not Spam'
     })
 
 if __name__ == '__main__':
