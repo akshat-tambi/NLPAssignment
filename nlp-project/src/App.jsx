@@ -36,7 +36,7 @@ const App = () =>
 
     return (
         <div style={{ textAlign: "center", padding: "40px", fontFamily: "Arial, sans-serif" }}>
-            <h1 style={{ marginBottom: "40px" }}>Message Spam/Ham Classifier</h1>
+            <h1 style={{ marginBottom: "40px" }}>Message Spam/Not Spam Classifier</h1>
 
             <form onSubmit={handleSubmit} style={{ marginBottom: "20px" }}>
                 <input
