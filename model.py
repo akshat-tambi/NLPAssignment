@@ -7,11 +7,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
-import os
+
 
 # stopwords from NLTK
 nltk.download('stopwords')
-os.system('clear')
 
 # data load
 url = "https://github.com/akshat-tambi/NLPAssignment/raw/refs/heads/main/spam.csv"
@@ -41,7 +40,7 @@ X_train, X_temp, y_train, y_temp = train_test_split(data['message'], data['label
 X_dev, X_test, y_dev, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42, stratify=y_temp)  
 
 # we vectorize the text through TF-IDF [bi and tri-grams]
-vectorizer = TfidfVectorizer(ngram_range=(2, 3), max_features=5000)
+vectorizer = TfidfVectorizer(ngram_range=(1, 3), max_features=5000)
 X_train_vec = vectorizer.fit_transform(X_train)
 X_dev_vec = vectorizer.transform(X_dev)
 X_test_vec = vectorizer.transform(X_test)
